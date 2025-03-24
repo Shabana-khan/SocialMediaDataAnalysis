@@ -4,9 +4,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import random
 import missingno as msno
-from matplotlib.ticker import MaxNLocator
 
 filepath='C:/Users/Shabana/OneDrive/Desktop/test/sentimentdataset.csv'
 df = pd.read_csv(filepath)
@@ -72,7 +70,6 @@ with pd.ExcelWriter(r'C:\Users\Shabana\OneDrive\Desktop\test\PopularSentimentsfo
     most_liked_platform_countrywise.to_excel(writer, sheet_name='Most Liked', index=False)
 
 #lets visualize the country wise popular sentiments through bar plot
-
 ##Convert series to DataFrames
 most_retweets_platform_countrywise_df = most_retweets_platform_countrywise.reset_index(drop=True)
 most_liked_platform_countrywise_df = most_liked_platform_countrywise.reset_index(drop=True)
